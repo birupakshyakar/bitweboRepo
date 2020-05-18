@@ -6,6 +6,13 @@ Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/license
 */
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+.downloadDiv{
+	border: 1px solid #ccc;padding:5px;margin-top: 10px;margin:2px;height: 85px;
+}
+.downloadA{
+	/*line-height: 55px;*/
+	text-decoration: none !important;color: red !important;
+}
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: normal;
