@@ -45,3 +45,5 @@ function sendPartnerRequest(name,mobile_number,mail_id,message)
 		alert("Please fill all values");
 	}
 }
+
+
