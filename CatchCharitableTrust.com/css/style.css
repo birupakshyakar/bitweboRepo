@@ -105,7 +105,19 @@ p{
 	float:left;
 	margin: 9px 0;
 	margin-left:20px;
+
 }
+.topbar .bar-mail strong{
+	color: white;
+}
+.topbar .bar-mail span{
+	color: white;
+}
+.topbar .bar-mail i{
+	color: white;
+}
+
+
 .topbar .bar-phone strong, .topbar .bar-mail strong{
 	font-weight:600;
 }
@@ -800,11 +812,11 @@ video {
 .subscribe .subscribe-inner {
     overflow: hidden;
 }
-.bwt-footer-copyright { font-size:14px; background:#222126; color: #878C92; padding:10px 0; line-height:20px;}
+/*.bwt-footer-copyright { font-size:14px; background:#222126; color: #878C92; padding:10px 0; line-height:20px;}
 .bwt-footer-copyright .left-text{ text-align:left; margin:10px 0;}
 .bwt-footer-copyright .right-text{ text-align:right; margin:10px 0;}
 .bwt-footer-copyright a{ color: #6f6f6f; }
-.bwt-footer-copyright a:hover{ color: #6f6f6f; }
+.bwt-footer-copyright a:hover{ color: #6f6f6f; }*/
 
 #inner-banner{
 	display:block;
@@ -1320,11 +1332,11 @@ nav.navbar.bootsnav .navbar-toggle {
     padding-bottom: 40%;
     overflow: hidden;
 }
-.bwt-footer-copyright .left-text {
+/*.bwt-footer-copyright .left-text {
     text-align: center;
 }
 .bwt-footer-copyright .right-text {
-    text-align: center;
+    text-align: center;*/
 }
 	
 }
