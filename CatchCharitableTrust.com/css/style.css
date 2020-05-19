@@ -149,6 +149,7 @@ p{
 .topbar .header-social{
 	float:right;
 	margin:-5px 0;
+	margin-left: 280px;
 }
 .topbar .header-social a{
 	color:#fff;
@@ -1397,7 +1398,8 @@ h1 {
     line-height: 26px;
 }
 .topbar .header-social {
-    display: none;
+    /*display: none;*/
+    margin-left: 22px;
 }
 .attr-nav {
     right:0;
