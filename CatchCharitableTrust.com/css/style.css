@@ -99,6 +99,15 @@ p{
 	padding-right:20px;
 	margin: 9px 0;
 }
+.topbar .bar-phone strong{
+	color: white;
+}
+.topbar .bar-phone span{
+	color: white;
+}
+.topbar .bar-phone i{
+	color: white
+}
 .topbar .bar-mail{
 	font-size:14px;
 	line-height:14px;
@@ -116,9 +125,25 @@ p{
 .topbar .bar-mail i{
 	color: white;
 }
+.topbar .bar-whatsapp{
+	font-size:14px;
+	line-height:14px;
+	float:left;
+	margin: 9px 0;
+	margin-left:20px;
 
+}
+.topbar .bar-whatsapp strong{
+	color: white;
+}
+.topbar .bar-whatsapp span{
+	color: white;
+}
+.topbar .bar-whatsapp i{
+	color: white;
+}
 
-.topbar .bar-phone strong, .topbar .bar-mail strong{
+.topbar .bar-phone strong, .topbar .bar-mail strong, .topbar .bar-whatsapp strong{
 	font-weight:600;
 }
 .topbar .header-social{
