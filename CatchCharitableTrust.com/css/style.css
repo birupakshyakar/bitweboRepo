@@ -40,6 +40,8 @@ a:hover{
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	color: aliceblue
+	
 }
 
 a:hover{
@@ -149,7 +151,7 @@ p{
 .topbar .header-social{
 	float:right;
 	margin:-5px 0;
-	margin-left: 280px;
+	margin-left:258px;
 }
 .topbar .header-social a{
 	color:#fff;
