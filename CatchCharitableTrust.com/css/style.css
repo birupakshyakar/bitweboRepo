@@ -41,7 +41,7 @@ a:hover{
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	color: aliceblue
-	
+
 }
 
 a:hover{
@@ -87,6 +87,16 @@ h6{
 p{
 	margin-bottom:20px;
 }
+
+@media only screen and (max-width: 750px) 
+{
+  .navbar-header a img
+  {
+    margin-top: -62px!important;
+   
+  }
+}
+
 
 .topbar{
     padding:5px 0;
@@ -143,6 +153,7 @@ p{
 }
 .topbar .bar-whatsapp i{
 	color: white;
+	margin-left: -10px;
 }
 
 .topbar .bar-phone strong, .topbar .bar-mail strong, .topbar .bar-whatsapp strong{
