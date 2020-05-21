@@ -49,8 +49,8 @@ a:hover{
 }
 
 h1, h2, h3, h4, h5, h6{
-	color:rgba(212, 236, 11, 0.96);
-	margin:0 0 0 0;
+	color:rgba(212, 236, 11, 0.96)
+;	margin:0 0 0 0;
     font-weight: bold;
 }
 
@@ -92,11 +92,19 @@ p{
 {
   .navbar-header a img
   {
-    margin-top: -62px!important;
+    margin-top: 56px!important;
    
   }
 }
 
+@media only screen and (max-width: 1280px) 
+{
+  .header-social
+  {
+    margin-right: -221px!important;
+   
+  }
+}
 
 .topbar{
     padding:5px 0;
@@ -162,7 +170,7 @@ p{
 .topbar .header-social{
 	float:right;
 	margin:-5px 0;
-	margin-left:258px;
+	margin-left:164px;
 }
 .topbar .header-social a{
 	color:#fff;
@@ -421,22 +429,22 @@ p{
 /*       Slides backgrounds     */
 /********************************/
 #first-slider .slide1 {
-	background:url(../images/slide1.jpg);
+	background:url(../images/s1.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #first-slider .slide2 {
-	background:url(../images/slide2.jpg);
+	background:url(../images/s2.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #first-slider .slide3 {
-	background:url(../images/slide3.jpg);
+	background:url(../images/s3.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #first-slider .slide4 {
-	background:url(../images/slide4.jpg);
+	background:url(../images/s4.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
