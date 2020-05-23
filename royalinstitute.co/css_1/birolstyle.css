@@ -1,0 +1,18 @@
+.transparentDIv
+{
+  visibility: visible;
+    animation-duration: 1000ms;
+    animation-delay: 300ms;
+    animation-name: fadeInLeft;
+    background: #f1e8e84f;
+     background-color: white; 
+    opacity: 1.4; 
+    border-radius: 30px;
+    width: 20% !important;
+    margin-left :  50px;
+}
+.transparentDIv i,p {
+
+  color: yellow !important;
+  font-size:20px;
+}
