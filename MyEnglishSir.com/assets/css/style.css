@@ -6,6 +6,20 @@ Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/license
 */
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+.loginInput{
+	width: 100%;
+    height: 50px;
+    border: 2px solid #3d84e6;
+    border-radius: 30px;
+    padding: 15px;
+}
+#userLogin{
+	width: 50%;
+    margin-top: 10px;
+    color: white;
+    border-radius: 20px;
+}
 .downloadDiv{
 	border: 1px solid #ccc;padding:5px;margin-top: 10px;margin:2px;height: 85px;
 }
