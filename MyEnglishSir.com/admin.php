@@ -62,6 +62,15 @@
         <div class="row">
             <div class="col-lg-12 col-md-12" style="margin-top:50px">
                 <h3>Upload New Document</h3>
+                <label>Subject</label><br>
+                <select id="subject">
+                    <option value="">Select your Subject</option>
+                    <option value="1">Grammar</option>
+                    <option value="2">Writing Skills</option>
+                    <option value="3">Communicative English</option>
+                    <option value="4">Literature</option>
+
+                </select><br>
                 <label>Caption</label><br>
                 <input type="text" id="caption" style="width:300px;height: 30px" /><br>
                 <label>New PDF</label>
@@ -123,7 +132,7 @@
     <script type="text/javascript">        
        $("#uploadSubmit").on('click', function () {
             $(".uploadLoader").show();
-            if($('#pdfFile').val()!="" && $("#caption").val()!="")
+            if($('#pdfFile').val()!="" && $("#caption").val()!="" && $("#subject").val()!="")
             {
                 var file_type=$('#pdfFile').prop('files')[0].type;                
                 if(file_type=="application/pdf")
@@ -131,9 +140,11 @@
                     $("#uploadMsg").hide();
                     var pdf_file = $('#pdfFile').prop('files')[0];
                     var caption = $("#caption").val();
+                    var subject= $("#subject").val();
                     var form_data = new FormData();
                     form_data.append('pdf_file', pdf_file);
                     form_data.append('caption', caption);
+                    form_data.append('subject', subject);
                     $.ajax({
                         url: "insert_pdf.php",
                         type: "POST",
@@ -176,7 +187,7 @@
             {
                 $(".uploadLoader").hide();
                 $("#uploadMsg").show();
-                $("#uploadMsg").text("Please select PDF file and Fill Caption");
+                $("#uploadMsg").text("Please select PDF file and Fill Caption And Subject");
                 $("#uploadMsg").css('color','red');
             }
           

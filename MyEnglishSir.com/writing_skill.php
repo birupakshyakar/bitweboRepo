@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="free-educational-responsive-web-template-webEdu">
     <meta name="author" content="webThemez.com">
-    <title>About - My English Sir</title>
+    <title>Writing Skill - My English Sir</title>
     <link rel="favicon" href="assets/images/favicon.png">
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -45,8 +45,8 @@
                     <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Study Materials<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="grammar.php">Grammar</a></li>
-                            <li><a href="writing_skill.php">Writing Skills</a></li>
+                            <li><a href="grammar.php">Grammar</a></li>
+                            <li class="active"><a href="writing_skill.php">Writing Skills</a></li>
                             <li><a href="communicative.php">Communicative English</a></li>
                             <li><a href="literature.php">Literature</a></li>
                         </ul>
@@ -62,7 +62,7 @@
 
  	<header id="head" class="secondary">
             <div class="container">
-                    <h1>Grammar</h1>
+                    <h1>Writing Skills</h1>
                    <!--  <p>Our team helps you to be exepert in english</p> -->
                 </div>
     </header>
@@ -76,7 +76,7 @@
                 <div class="col-sm-1 col-md-1 col-lg-1"></div>
             <?php
 
-                $sql="select * from pdf_details where subject='1' order by id desc";
+                $sql="select * from pdf_details where subject='2' order by id desc";
                 $result=mysqli_query($conn, $sql);
                 $row_num=mysqli_num_rows($result);
                 if($row_num > 0)
@@ -238,9 +238,9 @@
                                 <a href="about.html">About</a> |
                                 <a href="services.html">Services</a> |
                                 <a href="grammar.php">Grammar</a> |
-                                <a href="skills.html">Writing Skills</a> |
-                                <a href="communicative.html">Communicative English</a> |
-                                <a href="literature.html">Literature</a> |
+                                <a href="writing_skill.php">Writing Skills</a> |
+                                <a href="communicative.php">Communicative English</a> |
+                                <a href="literature.php">Literature</a> |
                                 <a href="videos.html">Videos</a> |
                                 <a href="contact.html">Help Line</a>
 							</p>

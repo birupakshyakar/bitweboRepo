@@ -6,7 +6,8 @@
 	$filename = $_FILES["pdf_file"]["name"];	
     move_uploaded_file($_FILES["pdf_file"]["tmp_name"], $target_file);
     $description = $_REQUEST['caption'];
-	$sql = "insert into pdf_details(description,pdf_file_name) values('$description','pdf/$filename')";
+    $subject = $_REQUEST['subject'];
+	$sql = "insert into pdf_details(description,pdf_file_name,subject) values('$description','$filename','$subject')";
 	
 	$result = mysqli_query($conn, $sql);
 	
