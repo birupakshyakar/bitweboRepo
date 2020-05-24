@@ -21,6 +21,17 @@
   75%  {background-color:green; left:50px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
 }*/
+
+@media only screen and (max-width: 750px) 
+{
+  .whyus_top a img
+  {
+    margin-bottom: 30px!important;
+    margin-left: -14px!important;
+  }
+}
+
+
 @media(min-width: 780px){
   .lb-outerContainer{
   width: 708px !important;

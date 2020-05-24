@@ -220,6 +220,7 @@ img{
   display: inline;
   width: 100%;
 }
+
 .slider_area {
   background-color: #ccc;
   display: inline;
@@ -227,6 +228,21 @@ img{
   margin-top: 0px;
   width: 100%;
 }
+@media only screen and (max-width: 750px) 
+{
+  .slider_area a img
+  {
+    margin-top: 0px!important;
+  }
+}
+@media only screen and (max-width: 750px) 
+{
+  .slider a img
+  {
+    margin-top: -66px!important;
+  }
+}
+
 .slider_caption {
   left: 5%;
   position: absolute;
