@@ -2,8 +2,28 @@
   position: relative;
 }
 #slides .slides-container {
-  display: none;
+
+  /*display: none;*/
 }
+#slides .slider {
+
+  /*display: none;*/
+}
+@media only screen and (max-width: 750px) 
+{
+  .slides-container a img
+  {
+    margin-top: 0px!important;
+  }
+}
+@media only screen and (max-width: 750px) 
+{
+ .slider a img
+  {
+    margin-top: -66px!important;
+  }
+}
+
 #slides .scrollable {
   *zoom: 1;
   position: relative;
