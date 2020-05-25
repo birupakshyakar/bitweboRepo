@@ -38,6 +38,16 @@ a, a:hover, button, button:hover, .btnborder, .btntop {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
+.login-bar {
+}
+@media only screen and (max-width: 750px) 
+{
+  .login-bar div
+  {
+    margin-top: -14px!important;
+  }
+}
+
 .button {
   display: inline-block;
   min-width: 225px;

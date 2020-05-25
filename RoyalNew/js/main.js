@@ -144,11 +144,11 @@ Website by Websolute
             if ($(this).isInViewport()) {
 
                 setTimeout(function(){
-                    $('.odometer.first').html(5142);
-                    $('.odometer.second').html(51);
-                    $('.odometer.third').html(422);
-                    $('.odometer.fourth').html(9870);
-                    $('.odometer.fifth').html(658);
+                    $('.odometer.first').html(1452);
+                    $('.odometer.second').html(305);
+                    $('.odometer.third').html(45);
+                    $('.odometer.fourth').html(13);
+                    $('.odometer.fifth').html(24);
                 }, 0);
             } else {
             }
