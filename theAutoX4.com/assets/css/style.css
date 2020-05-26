@@ -347,7 +347,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: inherit;
+  color: red;
 }
 
 /* line 113, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
@@ -4287,7 +4287,7 @@ hero-btn {
   font-family: "Barlow Condensed", sans-serif;
   display: block;
   position: relative;
-  margin-left: 50px;
+  margin-left: 24px;
   margin-bottom: 10px;
 }
 
