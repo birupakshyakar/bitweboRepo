@@ -32,15 +32,14 @@
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Courses</a></li>
+                   <!--  <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">Why Us</a></li>
                     <li><a href="portfolio.html">Results</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Gallery</a></li>
+                    <li><a href="portfolio.html">Gallery</a></li> -->
                     <!-- <li><a href="blog.html">Blog</a></li> -->
-                    <li><a href="blog.html">Franchise</a></li>
+                   <!--  <li><a href="blog.html">Franchise</a></li>
                     <li><a href="about.html">Career</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li> -->
                 </ul>
             </div>
             <div class="mobile-menu"><i class="fa fa-bars"></i></div>
@@ -444,9 +443,9 @@
 
         <section class="get-started">
             <div class="container">
-                <h2>We are always ready to help you.</h2>
+                <h2>Talk to Our Expert</h2>
                 <p>Click here and give your contact number. Our representative will contact you within 6 hours.</p>
-                <a href="contact.html" class="button">Get a Call Back</a>
+                <a class="button" data-target="#callbackmodal" data-toggle="modal">Get a Call Back</a>
             </div>
         </section>
     </div>
@@ -478,6 +477,38 @@
             format: '(,ddd)',
         };
     </script>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="callbackmodal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><b>Request a Call Back</b></h5>
+
+        <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close" style="margin-top: -22px; color: red">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+      <div class="modal-body" style="color: black">
+        <input type="text" placeholder="Your Name" style="width: 100%"></input> <br> <br>
+        <input type="text" placeholder="Mobile Number" style="width: 100%"></input> <br> <br>
+        <!-- <input type="email" placeholder="Your E-mail" style="width: 100%"></input><br><br> -->
+        <textarea style="width: 100%" rows="6">
+          Hello Royal Institute ..!! Please Call me.. I want help ..
+        </textarea> 
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Send</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <script src="js/vendor/jquery-3.1.0.min.js"></script>
     <script src="js/vendor/jquery.easing.min.js"></script>
     <script src="js/vendor/tether.js"></script>
@@ -486,5 +517,57 @@
     <script src="js/vendor/isotope.pkgd.min.js"></script>
     <script src="js/vendor/odometer.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="js/biroyal.js"></script>
+    <script type="text/javascript">
+  $("#contactSubmit").on('click', function(){
+        //alert("catch");
+        $("#contactLoader").show();
+        $("#sendmessage").hide();
+        var name = $('#name').val();
+        /*var mail_id = $("#email").val();*/
+        var mobile = $("#phone").val();
+        /*var subject = $("#subject").val();*/
+        /*var message = $("#message").val();*/
+        //alert("Name: "+name+", Mailid: "+mail_id+", mobile: "+mobile+", subject: "+subject+", message: "+message);
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if(mobile!="")
+        {
+          $("#errormessage").hide();
+          $.ajax({
+            url : "smtp/send_email.php",
+            type: "POST",
+            data: {"name" : name, "mobile": mobile, "msg": message  },
+            success: function(response)
+            {
+                $("#contactLoader").hide();
+                //alert(response);
+                if(response.trim()=='success')
+                {
+                  $("#sendmessage").show();
+                  $("#errormessage").hide();
+                }
+                else
+                {
+                  $("#errormessage").show();
+                  $("#errormessage").text("Please fill up mobile number and mail id");
+                  $("#sendmessage").hide();
+                }
+
+            }
+          });
+
+
+        }
+        else
+        {
+          $("#contactLoader").hide();
+          $("#errormessage").show();
+          $("#errormessage").text("Please fill up mobile number");
+          $("#sendmessage").hide();
+        }
+    });
+  </script>
+
 </body>
+
 </html>
