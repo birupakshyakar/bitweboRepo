@@ -96,6 +96,16 @@
 	color:$theme-color;
 */
 /* line 57, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_variables.scss */
+
+/*@media only screen and (max-width: 750px) 
+{
+  .body-bg
+  {
+    width: 100%!important;
+   
+  }
+}*/
+
 .boxed-btn {
   background: #fff;
   color: #ff1313 !important;
@@ -4275,6 +4285,7 @@ hero-btn {
 /* line 5, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_team.scss */
 .single-team .team-img img {
   width: 100%;
+  height: 335px;
   transform: scale(1);
   transition: all 0.6s ease-out 0s;
 }
