@@ -114,7 +114,7 @@
       <h3>&nbsp &nbsp Reseller Partner</h3>
       <hr>
       <div class="col-md-6">
-        <img src="images/reseller.jpg" class="img-responsive">
+        <img src="images/reseller.jpg" class="img-responsive  wow fadeInDown">
         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero,
           pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque</p> -->
           <img src="images/applyreseller.png" class="img-responsive" onclick="openModal('resellermodal')">
@@ -122,7 +122,7 @@
       </div>
 
       <div class="col-md-6">
-        <div class="media">
+        <div class="media wow fadeInRight"  data-wow-delay="0.2s">
           <ul>
             <li>
               <div class="media-left">
@@ -148,7 +148,7 @@
               </div>
               <div class="media-body">
                 <h4 class="media-heading">Discover New Clients & Give Support</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget.</p>
+                <p>We work for your clients and you will give support to them. We don't do contact to your clients from our sites.We keep it secret.</p>
               </div>
             </li>
           </ul>
@@ -162,7 +162,7 @@
     <h3 align="right"><b>Indirect Partner &nbsp &nbsp</b></h3>
       <hr>
       <div class="col-md-6">
-        <div class="media">
+        <div class="media wow fadeInLeft"  data-wow-delay="0.1s">
           <ul>
             <li>
               <div class="media-left">
@@ -170,7 +170,7 @@
               </div>
               <div class="media-body">
                 <h4 class="media-heading">Only a Formal Agreement</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget.</p>
+                <p>If you don't want to do any website of yours or don't want to be our direct partner you can be an indirect partner of us.</p>
               </div>
             </li>
             <li>
@@ -179,7 +179,7 @@
               </div>
               <div class="media-body">
                 <h4 class="media-heading">Give us new Clients & get Commission</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget.</p>
+                <p>Only you have to generate clients and we will work and get percentage of commission from us</p>
               </div>
             </li>
             <li>
@@ -188,7 +188,7 @@
               </div>
               <div class="media-body">
                 <h4 class="media-heading">Commission grows as per your performance </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget.</p>
+                <p>As you generate more clients you will earn more and also you will get extra incentive as per our target achievement.</p>
               </div>
             </li>
           </ul>
@@ -196,7 +196,7 @@
       </div>
 
       <div class="col-md-6">
-        <img src="images/handshake.jpg" class="img-responsive">
+        <img src="images/handshake.jpg" class="img-responsive wow fadeInUp">
         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero,
           pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque</p> -->
           <img src="images/applyindirectpartner.png" class="img-responsive" onclick="openModal('indirectmodal')">
@@ -251,18 +251,65 @@
         </button>
       </div>
       <div class="modal-body" style="color: black">
-        <input type="text" placeholder="Your Name" style="width: 100%"></input> <br> <br>
+
+
+              <?php
+                  // The contact Us Form wont work with Local Host but it will work on Live Server
+                  if(isset($_REQUEST['submit'])) {
+                   // Checking for Empty Fields
+                   if(($_REQUEST['name'] == "") || ($_REQUEST['subject'] == "") || ($_REQUEST['email'] == "") || ($_REQUEST['message'] == "")){
+                    // msg displayed if required field missing
+
+                    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+                    
+                   } else {
+                   $name = $_REQUEST['name'];
+                   $subject = $_REQUEST['subject'];
+                   $email = $_REQUEST['email'];
+                   $message = $_REQUEST['message'];
+
+                   $mailTo = "mailtobitwebo@gmail.com";
+                   $headers = "From: ". $email;
+                   $txt = "You have received an email from ". $name. ".\n\n".$message;
+                   mail($mailTo, $subject, $txt, $headers);
+                   $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Sent Successfully </div>';
+
+                  }
+                  }
+                  ?>
+
+                  <!--Start Contact Us Row-->
+                  <div class="col-md-8">
+                   <!--Start Contact Us 1st Column-->
+                   <form action="" method="post">
+                    <input type="text" class="form-control" name="name" placeholder="Name"><br>
+                    <input type="text" class="form-control" name="subject" placeholder="Subject"><br>
+                    <input type="email" class="form-control" name="email" placeholder="E-mail"><br>
+                    <textarea class="form-control" name="message" placeholder="How can we help you?" style="height:150px;">
+                      I want to be the reseller partner of bitWebo. I am interested to do Software business by being a partner of bitWebo. Contact me on my number or send me an email details about your reseller plan . Thanking You .
+                    </textarea><br>
+                    <input class="btn btn-primary" type="submit" value="Send" name="submit">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <br><br>
+                    <?php if(isset($msg)) {echo $msg; } ?>
+                   </form>
+                  </div> <!-- End Contact Us 1st Column-->
+
+
+
+
+<!--         <input type="text" placeholder="Your Name" style="width: 100%"></input> <br> <br>
         <input type="text" placeholder="Mobile Number with your Country Code" style="width: 100%"></input> <br> <br>
         <input type="email" placeholder="Your E-mail" style="width: 100%"></input><br><br>
         <textarea style="width: 100%" rows="6">
           I want to be the reseller partner of bitWebo. I am interested to do Software business by being a partner of bitWebo. Contact me on my number or send me an email details about your reseller plan . Thanking You .
-        </textarea> 
+        </textarea>  -->
 
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-success">Send</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

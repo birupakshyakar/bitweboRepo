@@ -39,8 +39,16 @@
   display: table;
 }
 
+.wow {
+  visibility: hidden;
+}
 
-
+.zoomOut {
+  visibility: hidden;
+}
+.zoomIn {
+  visibility: hidden;
+}
 
 
 /*----------------------------------------------------------*/
@@ -825,6 +833,7 @@ ul.social-network li a {
   padding: 0;
 }
 
+
 .portfolio-filter > li {
   display: inline-block;
 }
@@ -863,7 +872,7 @@ ul.social-network li a {
 
 .portfolio-item {
 	margin: 0;
-	padding:0;
+	padding: 2px;
 }
 
 .overlay {

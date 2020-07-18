@@ -9,6 +9,16 @@ jQuery(function ($) {
 
 
   //Initiat WOW JS
+
+
+
+
+
+$( document ).ready(function() {
+  new WOW().init();
+});
+
+
   new WOW().init();
 
   $(window).scroll(function () {
